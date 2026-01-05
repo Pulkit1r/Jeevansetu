@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -133,7 +134,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   );
 };
 
-export default  () => {
+const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -407,3 +408,5 @@ export default  () => {
     </>
   );
 };
+
+export default Chatbot;

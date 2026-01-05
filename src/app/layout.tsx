@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/globalContext/store";
 import { Navbar, Sidebar, Header as MainHeader,ThemeProvider} from "@/components/index";
+import ChatbotInterface from "@/components/ChatbotInterface";
 
 
 const geistSans = Geist({
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -48,12 +49,10 @@ export default function RootLayout({
           </header>
           <Navbar className="hidden md:flex justify-center mt-3 sticky top-5 transition-all ease-in-out " />
 
-
-
-
+          <main className="dark:bg-gray-900">{children}</main>
           
-            <main className="dark:bg-gray-900">{children}</main>
-                                                                           
+          <ChatbotInterface />
+                                                              
         
           <Footer />
           </ThemeProvider>
