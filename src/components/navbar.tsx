@@ -278,7 +278,7 @@ export function Header() {
         <Link href={"/"} className="outline-none">
           <div className="flex gap-x-2 items-center ">
             <Avatar
-              className=" w-14 h-14 rounded-2xl"
+              className=" w-14 h-14 rounded-2xl border-black/20 dark:border-white/20 border-2 shadow-[0_2px_10px] dark:shadow-white/30"
               src="logo.jpg"
               alt="logo"
             />

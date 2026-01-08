@@ -1,4 +1,6 @@
- export default function Footer(){
+import Link from "next/link";
+
+export default function Footer(){
 return <footer className="shadow-[0_0_5px_0] shadow-gray-400 mt-10 dark:bg-gray-900 text-black-500 dark:text-gray-300 py-8">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center space-x-3 mb-4">
@@ -13,10 +15,10 @@ return <footer className="shadow-[0_0_5px_0] shadow-gray-400 mt-10 dark:bg-gray-
             <div>
               <h4 className="font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-sm text-black-400">
-                <li>Video Consultations</li>
-                <li>Offline Records</li>
-                <li>Medicine Search</li>
-                <li>AI Symptom Checker</li>
+                <li><Link href="/consult">Video Consultations</Link></li>
+                <li><Link href="/records">Offline Records</Link></li>
+                <li><Link href="/medicines">Medicine Search</Link></li>
+                <li><Link href="/symptoms">AI Symptom Checker</Link></li>
               </ul>
             </div>
             <div>
